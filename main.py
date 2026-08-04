@@ -7,7 +7,7 @@ import io
 app = FastAPI()
 
 model = tf.keras.models.load_model('olive_disease_model.keras')
-class_names = ['Healthy', 'Disease1', 'Disease2']  # replace with your actual classes
+class_names = ['aculus_olearius', 'Healthy', 'olive_peacock_spot']  # replace with your actual classes
 
 @app.post("/predict")
 async def predict(file: UploadFile = File(...)):
